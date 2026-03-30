@@ -25,7 +25,7 @@ Stockholm, Sweden — Open to Europe-wide & remote roles
 ## 💼 Contact
 - **Email** — dassubhasmita860@gmail.com
 - **Phone** — +46 762 031 369
-- **LinkedIn** — [linkedin.com/in/subhasmita-das](https://linkedin.com/in/subhasmita-das)
+- **LinkedIn** — [linkedin.com/in/subhasmita-das][https://www.linkedin.com/in/subhasmita-das-a582b4171-devops/]
 - **GitHub** — [github.com/Subhasmita696](https://github.com/Subhasmita696)
 
 ## 🎓 Education
