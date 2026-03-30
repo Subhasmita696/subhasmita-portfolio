@@ -41,11 +41,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;padding:0 60px;height:68px;d
 /* HERO */
 #hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:68px;}
 .hero-left{padding:80px 60px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--warm-border);}
-.hero-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--terracotta);margin-bottom:24px;display:flex;align-items:center;gap:12px;opacity:0;animation:rise 0.7s 0.2s ease forwards;}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:14px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--terracotta);margin-bottom:24px;display:flex;align-items:center;gap:12px;opacity:0;animation:rise 0.7s 0.2s ease forwards;}
 .hero-eyebrow::before{content:'';width:28px;height:1px;background:var(--terracotta);}
-.hero-name{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,7vw,96px);font-weight:300;line-height:1;letter-spacing:-1px;margin-bottom:10px;opacity:0;animation:rise 0.8s 0.35s ease forwards;}
-.hero-name strong{font-weight:600;}
-.hero-name .italic{font-style:italic;color:var(--terracotta);}
+.hero-name{font-family:'Cormorant Garamond',serif;font-size:clamp(64px,9vw,110px);font-weight:700;line-height:1;letter-spacing:-1px;margin-bottom:10px;opacity:0;animation:rise 0.8s 0.35s ease forwards;}
+.hero-name strong{font-weight:700;}
+.hero-name .italic{font-style:italic;color:var(--terracotta);font-weight:700;}
 .hero-title{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:2px;color:var(--ink-mid);margin-bottom:28px;opacity:0;animation:rise 0.8s 0.5s ease forwards;}
 .hero-desc{font-size:15px;color:var(--ink-mid);line-height:1.8;max-width:440px;margin-bottom:44px;opacity:0;animation:rise 0.8s 0.65s ease forwards;}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;opacity:0;animation:rise 0.8s 0.8s ease forwards;}
@@ -201,7 +201,7 @@ footer span{color:var(--terracotta);}
 <section id="hero" style="padding:0;">
   <div class="hero-left">
     <div class="hero-eyebrow">DevOps &amp; Cloud Engineer</div>
-    <h1 class="hero-name"><strong>Subhasmita</strong><br/><span class="italic">Das</span></h1>
+    <h1 class="hero-name"><strong>Subhasmita</strong><br/><strong><span class="italic">Das</span></strong></h1>
     <p class="hero-title">AWS · AZURE · GCP · KUBERNETES · TERRAFORM</p>
     <p class="hero-desc">Six years engineering the cloud infrastructure that powers modern software. I build CI/CD pipelines, manage multi-cloud platforms, and create the reliability systems engineering teams depend on.</p>
     <div class="hero-actions">
