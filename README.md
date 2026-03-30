@@ -2,6 +2,8 @@
 
 A modern, responsive portfolio showcasing 6+ years of experience in DevOps, Cloud Infrastructure, and Reliability Engineering.
 
+🌐 **[View Live Portfolio](https://subhasmita696.github.io/subhasmita-portfolio)**
+
 ## 👩‍💻 About
 
 DevOps & Cloud Engineer with expertise in:
