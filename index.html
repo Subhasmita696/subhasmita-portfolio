@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Subhasmita Das — DevOps & Cloud Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --cream: #faf8f4;
+  --cream2: #f3f0ea;
+  --parchment: #ede8df;
+  --warm-border: #e0d9ce;
+  --sage: #7a8c76;
+  --sage-light: #edf0eb;
+  --terracotta: #c4735a;
+  --terracotta-light: #f5ede9;
+  --ink: #2a2520;
+  --ink-mid: #6b6158;
+  --ink-light: #a09689;
+  --gold: #c9a96e;
+  --gold-light: #f7f1e6;
+  --white: #ffffff;
+  --shadow: 0 2px 24px rgba(42,37,32,0.07);
+  --shadow-lg: 0 8px 48px rgba(42,37,32,0.1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;line-height:1.6;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:900;padding:0 60px;height:68px;display:flex;align-items:center;justify-content:space-between;background:rgba(250,248,244,0.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--warm-border);}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--ink);}
+.nav-logo em{font-style:italic;color:var(--terracotta);}
+.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links a{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-mid);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover{color:var(--terracotta);}
+.nav-cta{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:9px 20px;background:var(--ink);color:var(--cream);text-decoration:none;transition:background 0.2s;}
+.nav-cta:hover{background:var(--terracotta);}
+
+/* HERO */
+#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:68px;}
+.hero-left{padding:80px 60px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--warm-border);}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--terracotta);margin-bottom:24px;display:flex;align-items:center;gap:12px;opacity:0;animation:rise 0.7s 0.2s ease forwards;}
+.hero-eyebrow::before{content:'';width:28px;height:1px;background:var(--terracotta);}
+.hero-name{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,7vw,96px);font-weight:300;line-height:1;letter-spacing:-1px;margin-bottom:10px;opacity:0;animation:rise 0.8s 0.35s ease forwards;}
+.hero-name strong{font-weight:600;}
+.hero-name .italic{font-style:italic;color:var(--terracotta);}
+.hero-title{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:2px;color:var(--ink-mid);margin-bottom:28px;opacity:0;animation:rise 0.8s 0.5s ease forwards;}
+.hero-desc{font-size:15px;color:var(--ink-mid);line-height:1.8;max-width:440px;margin-bottom:44px;opacity:0;animation:rise 0.8s 0.65s ease forwards;}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;opacity:0;animation:rise 0.8s 0.8s ease forwards;}
+.btn-main{padding:13px 28px;background:var(--ink);color:var(--cream);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background 0.25s;}
+.btn-main:hover{background:var(--terracotta);}
+.btn-ghost{padding:13px 28px;border:1px solid var(--warm-border);color:var(--ink-mid);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all 0.25s;}
+.btn-ghost:hover{border-color:var(--ink);color:var(--ink);}
+
+.hero-right{background:var(--cream2);display:flex;flex-direction:column;justify-content:center;padding:80px 60px;position:relative;overflow:hidden;}
+.hero-right::before{content:'';position:absolute;top:-100px;right:-100px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(196,115,90,0.07),transparent 70%);}
+.hero-stats{display:flex;flex-direction:column;}
+.hero-stat{padding:26px 0;border-bottom:1px solid var(--warm-border);display:flex;align-items:baseline;gap:16px;opacity:0;animation:rise 0.7s ease forwards;}
+.hero-stat:nth-child(1){animation-delay:0.5s;}
+.hero-stat:nth-child(2){animation-delay:0.65s;}
+.hero-stat:nth-child(3){animation-delay:0.8s;}
+.hero-stat:nth-child(4){animation-delay:0.95s;}
+.hero-stat:last-child{border-bottom:none;}
+.stat-big{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:var(--terracotta);line-height:1;}
+.stat-label{font-size:13px;color:var(--ink-mid);line-height:1.4;}
+.stat-label strong{display:block;color:var(--ink);font-weight:500;font-size:14px;}
+.location-badge{margin-top:36px;padding:14px 18px;background:var(--white);border:1px solid var(--warm-border);display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink-mid);}
+.loc-dot{width:8px;height:8px;border-radius:50%;background:var(--sage);flex-shrink:0;box-shadow:0 0 0 3px rgba(122,140,118,0.2);animation:blink 2s ease-in-out infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.4}}
+
+/* SECTIONS */
+section{padding:96px 60px;position:relative;}
+.sec-header{margin-bottom:56px;}
+.sec-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--terracotta);margin-bottom:12px;display:flex;align-items:center;gap:10px;}
+.sec-tag::before{content:'';width:22px;height:1px;background:var(--terracotta);}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,58px);font-weight:300;letter-spacing:-1px;line-height:1.1;}
+.sec-title em{font-style:italic;color:var(--terracotta);}
+
+/* SKILLS */
+#skills{background:var(--white);border-top:1px solid var(--warm-border);}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--warm-border);border:1px solid var(--warm-border);}
+.skill-cell{background:var(--white);padding:30px 26px;transition:background 0.25s;position:relative;}
+.skill-cell:hover{background:var(--terracotta-light);}
+.skill-cell-icon{font-size:20px;margin-bottom:12px;}
+.skill-cell-cat{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--terracotta);margin-bottom:10px;}
+.skill-cell-name{font-size:16px;font-weight:500;margin-bottom:14px;color:var(--ink);}
+.pill-row{display:flex;flex-wrap:wrap;gap:6px;}
+.pill{font-family:'DM Mono',monospace;font-size:10px;padding:4px 10px;background:var(--cream2);color:var(--ink-mid);border:1px solid var(--warm-border);letter-spacing:0.5px;}
+.pill.accent{background:var(--terracotta-light);color:var(--terracotta);border-color:rgba(196,115,90,0.25);}
+.pill.sage{background:var(--sage-light);color:var(--sage);border-color:rgba(122,140,118,0.25);}
+.pill.gold{background:var(--gold-light);color:#8a6c3a;border-color:rgba(201,169,110,0.3);}
+
+/* EXPERIENCE */
+#experience{background:var(--cream);}
+.exp-row{display:grid;grid-template-columns:190px 1fr;border-top:1px solid var(--warm-border);padding:44px 0;opacity:0;transform:translateY(14px);transition:all 0.55s ease;}
+.exp-row.visible{opacity:1;transform:translateY(0);}
+.exp-row:last-child{border-bottom:1px solid var(--warm-border);}
+.exp-meta{padding-right:36px;}
+.exp-period{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--ink-light);margin-bottom:8px;text-transform:uppercase;}
+.exp-badge{display:inline-block;font-family:'DM Mono',monospace;font-size:9px;padding:3px 8px;letter-spacing:1px;background:var(--sage-light);color:var(--sage);border:1px solid rgba(122,140,118,0.3);text-transform:uppercase;}
+.exp-badge.current{background:var(--terracotta-light);color:var(--terracotta);border-color:rgba(196,115,90,0.3);}
+.exp-company{font-family:'DM Mono',monospace;font-size:10px;color:var(--terracotta);letter-spacing:1px;margin-bottom:6px;text-transform:uppercase;}
+.exp-role{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;margin-bottom:18px;line-height:1.2;}
+.exp-list{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.exp-list li{font-size:14px;color:var(--ink-mid);line-height:1.7;padding-left:16px;position:relative;}
+.exp-list li::before{content:'—';position:absolute;left:0;color:var(--terracotta);font-size:12px;}
+.exp-list li strong{color:var(--ink);font-weight:500;}
+.impact-tag{display:inline-block;margin-left:4px;font-family:'DM Mono',monospace;font-size:9px;padding:1px 6px;background:var(--gold-light);color:#8a6c3a;border:1px solid rgba(201,169,110,0.4);}
+
+/* PROJECTS */
+#projects{background:var(--cream2);border-top:1px solid var(--warm-border);}
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.project-card{background:var(--white);border:1px solid var(--warm-border);padding:36px;position:relative;overflow:hidden;transition:all 0.3s ease;}
+.project-card:hover{border-color:var(--terracotta);box-shadow:var(--shadow-lg);transform:translateY(-3px);}
+.project-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--terracotta),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform 0.35s ease;}
+.project-card:hover::before{transform:scaleX(1);}
+.project-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px;}
+.project-num{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink-light);letter-spacing:2px;}
+.project-status{font-family:'DM Mono',monospace;font-size:9px;padding:3px 8px;letter-spacing:1px;text-transform:uppercase;}
+.status-prod{background:var(--sage-light);color:var(--sage);border:1px solid rgba(122,140,118,0.3);}
+.status-ml{background:var(--gold-light);color:#8a6c3a;border:1px solid rgba(201,169,110,0.3);}
+.project-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;margin-bottom:12px;line-height:1.2;}
+.project-desc{font-size:13px;color:var(--ink-mid);line-height:1.7;margin-bottom:20px;}
+.project-metrics{display:flex;gap:0;margin-bottom:20px;border:1px solid var(--warm-border);}
+.metric{flex:1;padding:14px 12px;text-align:center;border-right:1px solid var(--warm-border);}
+.metric:last-child{border-right:none;}
+.metric-val{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:var(--terracotta);line-height:1;}
+.metric-label{font-family:'DM Mono',monospace;font-size:8px;color:var(--ink-light);letter-spacing:1px;margin-top:3px;text-transform:uppercase;}
+.project-stack{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:18px;}
+.project-link{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--terracotta);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:gap 0.2s;}
+.project-link:hover{gap:10px;}
+
+/* ACHIEVEMENTS */
+#achievements{background:var(--white);border-top:1px solid var(--warm-border);}
+.ach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--warm-border);border:1px solid var(--warm-border);}
+.ach-card{background:var(--white);padding:32px 26px;transition:background 0.25s;}
+.ach-card:hover{background:var(--terracotta-light);}
+.ach-icon{font-size:26px;margin-bottom:14px;}
+.ach-title{font-size:15px;font-weight:500;margin-bottom:8px;color:var(--ink);}
+.ach-desc{font-size:13px;color:var(--ink-mid);line-height:1.6;}
+
+/* CONTACT */
+#contact{background:var(--ink);color:var(--cream);}
+#contact .sec-title{color:var(--cream);}
+#contact .sec-tag{color:var(--gold);}
+#contact .sec-tag::before{background:var(--gold);}
+.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-top:56px;}
+.contact-blurb{font-size:15px;color:rgba(250,248,244,0.6);line-height:1.8;margin-bottom:36px;}
+.contact-detail{display:flex;flex-direction:column;gap:1px;}
+.contact-row{display:flex;align-items:center;gap:14px;padding:15px 18px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);text-decoration:none;color:rgba(250,248,244,0.75);transition:all 0.2s;font-size:13px;}
+.contact-row:hover{background:rgba(196,115,90,0.15);color:var(--cream);border-color:rgba(196,115,90,0.4);}
+.contact-row-icon{font-size:15px;width:26px;text-align:center;}
+.availability-box{padding:32px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.03);margin-bottom:20px;}
+.avail-dot{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+.avail-circle{width:8px;height:8px;border-radius:50%;background:#7cb87a;animation:blink 2s infinite;}
+.avail-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;margin-bottom:8px;}
+.avail-desc{font-size:13px;color:rgba(250,248,244,0.5);line-height:1.6;}
+.about-extra{display:flex;flex-direction:column;gap:12px;}
+.about-item{padding:16px;border:1px solid rgba(255,255,255,0.07);}
+.about-item-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.about-item-val{font-size:13px;color:rgba(250,248,244,0.6);}
+
+/* FOOTER */
+footer{background:var(--ink);padding:20px 60px;border-top:1px solid rgba(255,255,255,0.07);display:flex;justify-content:space-between;align-items:center;}
+footer p{font-family:'DM Mono',monospace;font-size:10px;color:rgba(250,248,244,0.3);letter-spacing:1px;}
+footer span{color:var(--terracotta);}
+
+@keyframes rise{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  nav{padding:0 24px;} .nav-links{display:none;}
+  #hero{grid-template-columns:1fr;min-height:auto;}
+  .hero-left{padding:60px 24px 40px;border-right:none;border-bottom:1px solid var(--warm-border);}
+  .hero-right{padding:40px 24px 60px;}
+  section{padding:70px 24px;}
+  .skills-grid,.ach-grid{grid-template-columns:1fr;}
+  .exp-row{grid-template-columns:1fr;gap:14px;}
+  .projects-grid{grid-template-columns:1fr;}
+  .contact-layout{grid-template-columns:1fr;gap:40px;}
+  footer{padding:20px 24px;flex-direction:column;gap:8px;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Subhasmita <em>Das</em></div>
+  <ul class="nav-links">
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="mailto:dassubhasmita860@gmail.com" class="nav-cta">Hire Me</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero" style="padding:0;">
+  <div class="hero-left">
+    <div class="hero-eyebrow">DevOps &amp; Cloud Engineer</div>
+    <h1 class="hero-name"><strong>Subhasmita</strong><br/><span class="italic">Das</span></h1>
+    <p class="hero-title">AWS · AZURE · GCP · KUBERNETES · TERRAFORM</p>
+    <p class="hero-desc">Six years engineering the cloud infrastructure that powers modern software. I build CI/CD pipelines, manage multi-cloud platforms, and create the reliability systems engineering teams depend on.</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-main">See Projects</a>
+      <a href="#contact" class="btn-ghost">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="stat-big">6+</div>
+        <div class="stat-label"><strong>Years of Experience</strong>Cloud &amp; DevOps Engineering</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-big">60%</div>
+        <div class="stat-label"><strong>MLOps Efficiency Gain</strong>AWS ML infrastructure</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-big">40%</div>
+        <div class="stat-label"><strong>Productivity Boost</strong>CI/CD automation delivery</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-big">50%</div>
+        <div class="stat-label"><strong>Failure Rate Reduction</strong>Pipeline reliability</div>
+      </div>
+    </div>
+    <div class="location-badge">
+      <div class="loc-dot"></div>
+      Stockholm, Sweden — Open to Europe-wide &amp; remote roles
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="sec-header">
+    <div class="sec-tag">01 — Expertise</div>
+    <h2 class="sec-title">Technical <em>Stack</em></h2>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-cell">
+      <div class="skill-cell-icon">☁️</div>
+      <div class="skill-cell-cat">Cloud Platforms</div>
+      <div class="skill-cell-name">Multi-Cloud Infrastructure</div>
+      <div class="pill-row"><span class="pill accent">AWS</span><span class="pill accent">Azure</span><span class="pill accent">GCP</span><span class="pill">On-Premises</span></div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-cell-icon">🏗️</div>
+      <div class="skill-cell-cat">IaC & Automation</div>
+      <div class="skill-cell-name">Infrastructure as Code</div>
+      <div class="pill-row"><span class="pill sage">Terraform</span><span class="pill sage">Ansible</span><span class="pill">CloudFormation</span><span class="pill">ARM Templates</span><span class="pill">Bicep</span></div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-cell-icon">🐳</div>
+      <div class="skill-cell-cat">Containers & Orchestration</div>
+      <div class="skill-cell-name">Kubernetes Ecosystem</div>
+      <div class="pill-row"><span class="pill accent">Kubernetes</span><span class="pill accent">Docker</span><span class="pill">EKS</span><span class="pill">AKS</span><span class="pill">Helm</span><span class="pill">ECS</span></div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-cell-icon">🔁</div>
+      <div class="skill-cell-cat">CI/CD Pipelines</div>
+      <div class="skill-cell-name">Delivery Automation</div>
+      <div class="pill-row"><span class="pill sage">GitHub Actions</span><span class="pill sage">Jenkins</span><span class="pill">GitLab CI</span><span class="pill">Argo CD</span><span class="pill">JFrog</span></div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-cell-icon">📊</div>
+      <div class="skill-cell-cat">Monitoring & Observability</div>
+      <div class="skill-cell-name">Reliability Engineering</div>
+      <div class="pill-row"><span class="pill gold">Prometheus</span><span class="pill gold">Grafana</span><span class="pill">OpenSearch</span><span class="pill">Azure Monitor</span></div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-cell-icon">⌨️</div>
+      <div class="skill-cell-cat">Languages & Databases</div>
+      <div class="skill-cell-name">Scripting & Data</div>
+      <div class="pill-row"><span class="pill accent">Python</span><span class="pill accent">Bash</span><span class="pill">PowerShell</span><span class="pill">PostgreSQL</span><span class="pill">BigQuery</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="sec-header">
+    <div class="sec-tag">02 — History</div>
+    <h2 class="sec-title">Work <em>Experience</em></h2>
+  </div>
+  <div>
+    <div class="exp-row">
+      <div class="exp-meta"><div class="exp-period">Jul 2025 – Present</div><div class="exp-badge current">Current</div></div>
+      <div>
+        <div class="exp-company">ECDC — European Centre for Disease Prevention and Control</div>
+        <div class="exp-role">DevOps Engineer</div>
+        <ul class="exp-list">
+          <li>Built and optimized <strong>CI/CD pipelines</strong> using Jenkins, GitHub Actions, Docker, and Kubernetes (EKS/AKS) enabling continuous integration and deployment automation for microservices platforms.</li>
+          <li>Managed <strong>multi-cloud infrastructure</strong> on AWS and Azure using Terraform IaC, supporting cloud-native systems and scalable architecture.</li>
+          <li>Implemented full <strong>observability stack</strong> with Prometheus, Grafana, and Azure Monitor — improving incident response and system reliability across all environments.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-row">
+      <div class="exp-meta"><div class="exp-period">Jan 2025 – Jun 2025</div><div class="exp-badge">Freelance</div></div>
+      <div>
+        <div class="exp-company">Rupsa Security · Generative AI · Stark Flow</div>
+        <div class="exp-role">Freelance DevOps Engineer</div>
+        <ul class="exp-list">
+          <li>Designed Azure CI/CD workflow for Rupsa Security using AKS, Jenkins &amp; Prometheus — <strong>boosting productivity<span class="impact-tag">+40%</span></strong>.</li>
+          <li>Trained AI &amp; LLM models on scalable AWS infrastructure with integrated MLOps workflows — <strong>operational efficiency<span class="impact-tag">+60%</span></strong>.</li>
+          <li>Built Stark Flow pipelines with AWS + EKS + JFrog — <strong>cut deployment time<span class="impact-tag">−30%</span></strong> and failure rates by 50%.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-row">
+      <div class="exp-meta"><div class="exp-period">Aug 2023 – Sep 2024</div><div class="exp-badge">Full-time</div></div>
+      <div>
+        <div class="exp-company">CSM Technology</div>
+        <div class="exp-role">Platform Engineer</div>
+        <ul class="exp-list">
+          <li>Designed and managed <strong>AWS cloud infrastructure</strong> using Terraform and Ansible supporting IaC deployments for distributed systems.</li>
+          <li>Built CI/CD pipelines using Jenkins, GitLab CI, GitHub Actions, Kubernetes, Helm, and <strong>Argo CD</strong> — accelerating deployment automation and release cycles.</li>
+          <li>Implemented monitoring and logging with Prometheus and Grafana for system observability and performance optimization.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-row">
+      <div class="exp-meta"><div class="exp-period">Dec 2019 – Jul 2023</div><div class="exp-badge">Full-time</div></div>
+      <div>
+        <div class="exp-company">Tectoro Consulting Pvt. Ltd</div>
+        <div class="exp-role">Cloud Engineer</div>
+        <ul class="exp-list">
+          <li>Automated cloud infrastructure provisioning using <strong>Terraform, Ansible, and CloudFormation</strong> across multiple client environments.</li>
+          <li>Developed CI/CD pipelines and containerized environments with Jenkins, Docker, Kubernetes, and Helm — improving deployment reliability.</li>
+          <li>Deployed <strong>Java Spring Boot microservices</strong> and optimized system architecture, security, and distributed system performance.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="sec-header">
+    <div class="sec-tag">03 — Portfolio</div>
+    <h2 class="sec-title">Production <em>Projects</em></h2>
+  </div>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="project-header"><span class="project-num">Project 01</span><span class="project-status status-prod">Production</span></div>
+      <div class="project-title">Kubernetes Multi-Cluster GitOps Platform</div>
+      <div class="project-desc">Designed and deployed a production GitOps platform using Argo CD across multi-region AWS EKS clusters. Implemented progressive delivery with canary deployments, automated rollbacks, and cluster-wide policy enforcement via OPA Gatekeeper — enabling zero-downtime deployments for 30+ microservices.</div>
+      <div class="project-metrics">
+        <div class="metric"><div class="metric-val">30+</div><div class="metric-label">Microservices</div></div>
+        <div class="metric"><div class="metric-val">99.9%</div><div class="metric-label">Uptime SLA</div></div>
+        <div class="metric"><div class="metric-val">0</div><div class="metric-label">Downtime Events</div></div>
+      </div>
+      <div class="project-stack"><span class="pill sage">AWS EKS</span><span class="pill accent">Argo CD</span><span class="pill">Helm</span><span class="pill">Terraform</span><span class="pill">OPA</span><span class="pill gold">Prometheus</span></div>
+      <a href="https://github.com" class="project-link">View on GitHub →</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header"><span class="project-num">Project 02</span><span class="project-status status-ml">MLOps</span></div>
+      <div class="project-title">AWS MLOps Pipeline for LLM Training</div>
+      <div class="project-desc">Built a scalable MLOps infrastructure on AWS to train and serve large language models. Automated model versioning, training job orchestration with SageMaker Pipelines, CI/CD for model promotion, and real-time monitoring dashboards — cutting time-to-production for new model versions by 60%.</div>
+      <div class="project-metrics">
+        <div class="metric"><div class="metric-val">60%</div><div class="metric-label">Efficiency Gain</div></div>
+        <div class="metric"><div class="metric-val">45%</div><div class="metric-label">Productivity Up</div></div>
+        <div class="metric"><div class="metric-val">Auto</div><div class="metric-label">Rollback</div></div>
+      </div>
+      <div class="project-stack"><span class="pill accent">SageMaker</span><span class="pill accent">AWS S3</span><span class="pill">GitHub Actions</span><span class="pill">Docker</span><span class="pill gold">Grafana</span><span class="pill">MLflow</span></div>
+      <a href="https://github.com" class="project-link">View on GitHub →</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header"><span class="project-num">Project 03</span><span class="project-status status-prod">Production</span></div>
+      <div class="project-title">Wanderlust — Full-Stack MERN on EKS</div>
+      <div class="project-desc">End-to-end deployment of a full-stack MERN application on AWS EKS. Provisioned all infrastructure with Terraform, containerized every service, implemented autoscaling with HPA/VPA, and set up a complete observability stack with live Prometheus and Grafana dashboards.</div>
+      <div class="project-metrics">
+        <div class="metric"><div class="metric-val">EKS</div><div class="metric-label">Cluster</div></div>
+        <div class="metric"><div class="metric-val">HPA</div><div class="metric-label">Auto Scaling</div></div>
+        <div class="metric"><div class="metric-val">Full</div><div class="metric-label">Observability</div></div>
+      </div>
+      <div class="project-stack"><span class="pill accent">AWS EKS</span><span class="pill sage">Terraform</span><span class="pill">Docker</span><span class="pill">MongoDB</span><span class="pill">Node.js</span><span class="pill gold">Prometheus</span></div>
+      <a href="https://github.com" class="project-link">View on GitHub →</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header"><span class="project-num">Project 04</span><span class="project-status status-prod">Production</span></div>
+      <div class="project-title">Azure DevSecOps Pipeline for Security SaaS</div>
+      <div class="project-desc">Architected a full Azure DevSecOps pipeline for Rupsa Security Services — integrating SAST/DAST scanning, secrets management via Azure Key Vault, AKS-based deployments, and automated compliance checks. Enabled daily releases with full audit trails and reduced security review cycle time.</div>
+      <div class="project-metrics">
+        <div class="metric"><div class="metric-val">40%</div><div class="metric-label">Productivity Up</div></div>
+        <div class="metric"><div class="metric-val">Daily</div><div class="metric-label">Releases</div></div>
+        <div class="metric"><div class="metric-val">100%</div><div class="metric-label">Audit Trail</div></div>
+      </div>
+      <div class="project-stack"><span class="pill accent">Azure AKS</span><span class="pill">Key Vault</span><span class="pill">Jenkins</span><span class="pill sage">ARM Templates</span><span class="pill gold">Grafana</span><span class="pill">SonarQube</span></div>
+      <a href="https://github.com" class="project-link">View on GitHub →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="sec-header">
+    <div class="sec-tag">04 — Recognition</div>
+    <h2 class="sec-title">Key <em>Achievements</em></h2>
+  </div>
+  <div class="ach-grid">
+    <div class="ach-card">
+      <div class="ach-icon">🚀</div>
+      <div class="ach-title">Scalable Microservices</div>
+      <div class="ach-desc">Deployed enterprise-scale microservices with Kubernetes and Ansible, improving system scalability and reliability across production environments.</div>
+    </div>
+    <div class="ach-card">
+      <div class="ach-icon">⚙️</div>
+      <div class="ach-title">40% Manual Effort Saved</div>
+      <div class="ach-desc">Automated deployment workflows with Ansible, cutting manual effort by 40% and boosting engineering team's operational efficiency.</div>
+    </div>
+    <div class="ach-card">
+      <div class="ach-icon">🎓</div>
+      <div class="ach-title">DevOps Mentor</div>
+      <div class="ach-desc">Mentored team members and aspiring engineers on CI/CD, Terraform IaC, and container orchestration — helping them transition into DevOps roles.</div>
+    </div>
+    <div class="ach-card">
+      <div class="ach-icon">✍️</div>
+      <div class="ach-title">Technical Blogger</div>
+      <div class="ach-desc">Regularly publishes DevOps articles on Medium, sharing practical knowledge on Kubernetes, CI/CD pipelines, and cloud architecture.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="sec-header" style="margin-bottom:0;">
+    <div class="sec-tag">05 — Connect</div>
+    <h2 class="sec-title">Let's Work <em>Together</em></h2>
+  </div>
+  <div class="contact-layout">
+    <div>
+      <p class="contact-blurb">Open to senior DevOps, Cloud Platform, and SRE roles across Europe. I bring a track record of shipping reliable infrastructure, driving automation, and mentoring engineering teams.</p>
+      <div class="contact-detail">
+        <a href="mailto:dassubhasmita860@gmail.com" class="contact-row"><span class="contact-row-icon">✉️</span>dassubhasmita860@gmail.com</a>
+        <a href="tel:+46762031369" class="contact-row"><span class="contact-row-icon">📞</span>+46 762 031 369</a>
+        <a href="https://linkedin.com" class="contact-row"><span class="contact-row-icon">💼</span>LinkedIn — Subhasmita Das</a>
+        <a href="https://github.com" class="contact-row"><span class="contact-row-icon">🐙</span>GitHub — Projects &amp; Code</a>
+        <a href="https://medium.com" class="contact-row"><span class="contact-row-icon">📝</span>Medium — DevOps Blog</a>
+      </div>
+    </div>
+    <div>
+      <div class="availability-box">
+        <div class="avail-dot"><div class="avail-circle"></div><span style="font-family:'DM Mono',monospace;font-size:9px;color:rgba(250,248,244,0.45);letter-spacing:2px;">AVAILABLE NOW</span></div>
+        <div class="avail-title">Open to New Opportunities</div>
+        <div class="avail-desc">Based in Stockholm. Seeking senior DevOps, Cloud Platform, or SRE positions — remote, hybrid, or on-site across Europe.</div>
+      </div>
+      <div class="about-extra">
+        <div class="about-item">
+          <div class="about-item-label">Education</div>
+          <div class="about-item-val">B.Tech — Electronics &amp; Communication Engineering, 2019<br/>Narayana Memorial Institute of Engineering Technology</div>
+        </div>
+        <div class="about-item">
+          <div class="about-item-label">Languages</div>
+          <div class="about-item-val">English — Fluent &nbsp;·&nbsp; Swedish — Basic</div>
+        </div>
+        <div class="about-item">
+          <div class="about-item-label">Interests</div>
+          <div class="about-item-val">DevOps blogging · Mentoring · Painting · Cooking</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 <span>Subhasmita Das</span> — DevOps &amp; Cloud Engineer</p>
+  <p>Crafted with care · Stockholm, Sweden</p>
+</footer>
+
+<script>
+  const rows = document.querySelectorAll('.exp-row');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach((e,i) => {
+      if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('visible'),i*100); io.unobserve(e.target); }
+    });
+  },{threshold:0.1});
+  rows.forEach(r=>io.observe(r));
+</script>
+</body>
+</html>
