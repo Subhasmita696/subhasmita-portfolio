@@ -27,7 +27,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;line-height:1.6;}
-
+ 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:900;padding:0 60px;height:68px;display:flex;align-items:center;justify-content:space-between;background:rgba(250,248,244,0.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--warm-border);}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--ink);}
@@ -37,7 +37,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;padding:0 60px;height:68px;d
 .nav-links a:hover{color:var(--terracotta);}
 .nav-cta{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:9px 20px;background:var(--ink);color:var(--cream);text-decoration:none;transition:background 0.2s;}
 .nav-cta:hover{background:var(--terracotta);}
-
+ 
 /* HERO */
 #hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:68px;}
 .hero-left{padding:80px 60px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--warm-border);}
@@ -53,7 +53,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;padding:0 60px;height:68px;d
 .btn-main:hover{background:var(--terracotta);}
 .btn-ghost{padding:13px 28px;border:1px solid var(--warm-border);color:var(--ink-mid);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all 0.25s;}
 .btn-ghost:hover{border-color:var(--ink);color:var(--ink);}
-
+ 
 .hero-right{background:var(--cream2);display:flex;flex-direction:column;justify-content:center;padding:80px 60px;position:relative;overflow:hidden;}
 .hero-right::before{content:'';position:absolute;top:-100px;right:-100px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(196,115,90,0.07),transparent 70%);}
 .hero-stats{display:flex;flex-direction:column;}
@@ -69,7 +69,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;padding:0 60px;height:68px;d
 .location-badge{margin-top:36px;padding:14px 18px;background:var(--white);border:1px solid var(--warm-border);display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink-mid);}
 .loc-dot{width:8px;height:8px;border-radius:50%;background:var(--sage);flex-shrink:0;box-shadow:0 0 0 3px rgba(122,140,118,0.2);animation:blink 2s ease-in-out infinite;}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.4}}
-
+ 
 /* SECTIONS */
 section{padding:96px 60px;position:relative;}
 .sec-header{margin-bottom:56px;}
@@ -77,7 +77,7 @@ section{padding:96px 60px;position:relative;}
 .sec-tag::before{content:'';width:22px;height:1px;background:var(--terracotta);}
 .sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,58px);font-weight:300;letter-spacing:-1px;line-height:1.1;}
 .sec-title em{font-style:italic;color:var(--terracotta);}
-
+ 
 /* SKILLS */
 #skills{background:var(--white);border-top:1px solid var(--warm-border);}
 .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--warm-border);border:1px solid var(--warm-border);}
@@ -91,7 +91,7 @@ section{padding:96px 60px;position:relative;}
 .pill.accent{background:var(--terracotta-light);color:var(--terracotta);border-color:rgba(196,115,90,0.25);}
 .pill.sage{background:var(--sage-light);color:var(--sage);border-color:rgba(122,140,118,0.25);}
 .pill.gold{background:var(--gold-light);color:#8a6c3a;border-color:rgba(201,169,110,0.3);}
-
+ 
 /* EXPERIENCE */
 #experience{background:var(--cream);}
 .exp-row{display:grid;grid-template-columns:190px 1fr;border-top:1px solid var(--warm-border);padding:44px 0;opacity:0;transform:translateY(14px);transition:all 0.55s ease;}
@@ -108,7 +108,7 @@ section{padding:96px 60px;position:relative;}
 .exp-list li::before{content:'—';position:absolute;left:0;color:var(--terracotta);font-size:12px;}
 .exp-list li strong{color:var(--ink);font-weight:500;}
 .impact-tag{display:inline-block;margin-left:4px;font-family:'DM Mono',monospace;font-size:9px;padding:1px 6px;background:var(--gold-light);color:#8a6c3a;border:1px solid rgba(201,169,110,0.4);}
-
+ 
 /* PROJECTS */
 #projects{background:var(--cream2);border-top:1px solid var(--warm-border);}
 .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
@@ -131,7 +131,7 @@ section{padding:96px 60px;position:relative;}
 .project-stack{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;}
 .project-link{font-family:'DM Mono',monospace;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--terracotta);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:gap 0.2s;}
 .project-link:hover{gap:10px;}
-
+ 
 /* ACHIEVEMENTS */
 #achievements{background:var(--white);border-top:1px solid var(--warm-border);}
 .ach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--warm-border);border:1px solid var(--warm-border);}
@@ -140,7 +140,7 @@ section{padding:96px 60px;position:relative;}
 .ach-icon{font-size:36px;margin-bottom:14px;}
 .ach-title{font-size:22px;font-weight:500;margin-bottom:8px;color:var(--ink);}
 .ach-desc{font-size:18px;color:var(--ink-mid);line-height:1.6;}
-
+ 
 /* CONTACT */
 #contact{background:var(--ink);color:var(--cream);}
 #contact .sec-title{color:var(--cream);}
@@ -161,12 +161,12 @@ section{padding:96px 60px;position:relative;}
 .about-item{padding:16px;border:1px solid rgba(255,255,255,0.07);}
 .about-item-label{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
 .about-item-val{font-size:16px;color:rgba(250,248,244,0.6);}
-
+ 
 /* FOOTER */
 footer{background:var(--ink);padding:20px 60px;border-top:1px solid rgba(255,255,255,0.07);display:flex;justify-content:space-between;align-items:center;}
 footer p{font-family:'DM Mono',monospace;font-size:10px;color:rgba(250,248,244,0.3);letter-spacing:1px;}
 footer span{color:var(--terracotta);}
-
+ 
 /* TOOLS */
 #tools{background:var(--cream-2);border-top:1px solid var(--warm-border);}
 .tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;}
@@ -174,9 +174,9 @@ footer span{color:var(--terracotta);}
 .tool-card:hover{background:var(--terracotta-light);border-color:var(--terracotta);transform:translateY(-2px);}
 .tool-icon{font-size:36px;line-height:1;}
 .tool-name{font-family:'DM Mono',monospace;font-size:11px;font-weight:600;letter-spacing:1px;color:var(--ink);text-transform:uppercase;text-align:center;}
-
+ 
 @keyframes rise{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
-
+ 
 /* RESPONSIVE */
 @media(max-width:900px){
   nav{padding:0 24px;} .nav-links{display:none;}
@@ -193,7 +193,7 @@ footer span{color:var(--terracotta);}
 </style>
 </head>
 <body>
-
+ 
 <nav>
   <div class="nav-logo">Subhasmita <em>Das</em></div>
   <ul class="nav-links">
@@ -205,7 +205,7 @@ footer span{color:var(--terracotta);}
   </ul>
   <a href="/cdn-cgi/l/email-protection#147075676761767c7567797d60752c2224547379757d783a777b79" class="nav-cta">Hire Me</a>
 </nav>
-
+ 
 <!-- HERO -->
 <section id="hero" style="padding:0;">
   <div class="hero-left">
@@ -243,7 +243,7 @@ footer span{color:var(--terracotta);}
     </div>
   </div>
 </section>
-
+ 
 <!-- SKILLS -->
 <section id="skills">
   <div class="sec-header">
@@ -289,7 +289,7 @@ footer span{color:var(--terracotta);}
     </div>
   </div>
 </section>
-
+ 
 <!-- TOOLS & TECHNOLOGIES -->
 <section id="tools">
   <div class="sec-header">
@@ -363,7 +363,7 @@ footer span{color:var(--terracotta);}
     </div>
   </div>
 </section>
-
+ 
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="sec-header">
@@ -421,7 +421,7 @@ footer span{color:var(--terracotta);}
     </div>
   </div>
 </section>
-
+ 
 <!-- PROJECTS -->
 <section id="projects">
   <div class="sec-header">
@@ -429,7 +429,7 @@ footer span{color:var(--terracotta);}
     <h2 class="sec-title">Production <em>Projects</em></h2>
   </div>
   <div class="projects-grid">
-
+ 
     <div class="project-card">
       <div class="project-header"><span class="project-num">Project 01</span><span class="project-status status-prod">Production</span></div>
       <div class="project-title">Kubernetes Multi-Cluster GitOps Platform</div>
@@ -442,7 +442,7 @@ footer span{color:var(--terracotta);}
       <div class="project-stack"><span class="pill sage">AWS EKS</span><span class="pill accent">Argo CD</span><span class="pill">Helm</span><span class="pill">Terraform</span><span class="pill">OPA</span><span class="pill gold">Prometheus</span></div>
       <a href="https://github.com/Subhasmita696" class="project-link">View on GitHub →</a>
     </div>
-
+ 
     <div class="project-card">
       <div class="project-header"><span class="project-num">Project 02</span><span class="project-status status-ml">MLOps</span></div>
       <div class="project-title">AWS MLOps Pipeline for LLM Training</div>
@@ -455,7 +455,7 @@ footer span{color:var(--terracotta);}
       <div class="project-stack"><span class="pill accent">SageMaker</span><span class="pill accent">AWS S3</span><span class="pill">GitHub Actions</span><span class="pill">Docker</span><span class="pill gold">Grafana</span><span class="pill">MLflow</span></div>
       <a href="https://github.com/Subhasmita696" class="project-link">View on GitHub →</a>
     </div>
-
+ 
     <div class="project-card">
       <div class="project-header"><span class="project-num">Project 03</span><span class="project-status status-prod">Production</span></div>
       <div class="project-title">Wanderlust — Full-Stack MERN on EKS</div>
@@ -468,7 +468,7 @@ footer span{color:var(--terracotta);}
       <div class="project-stack"><span class="pill accent">AWS EKS</span><span class="pill sage">Terraform</span><span class="pill">Docker</span><span class="pill">MongoDB</span><span class="pill">Node.js</span><span class="pill gold">Prometheus</span></div>
       <a href="https://github.com/Subhasmita696" class="project-link">View on GitHub →</a>
     </div>
-
+ 
     <div class="project-card">
       <div class="project-header"><span class="project-num">Project 04</span><span class="project-status status-prod">Production</span></div>
       <div class="project-title">Azure DevSecOps Pipeline for Security SaaS</div>
@@ -481,10 +481,10 @@ footer span{color:var(--terracotta);}
       <div class="project-stack"><span class="pill accent">Azure AKS</span><span class="pill">Key Vault</span><span class="pill">Jenkins</span><span class="pill sage">ARM Templates</span><span class="pill gold">Grafana</span><span class="pill">SonarQube</span></div>
       <a href="https://github.com/Subhasmita696" class="project-link">View on GitHub →</a>
     </div>
-
+ 
   </div>
 </section>
-
+ 
 <!-- ACHIEVEMENTS -->
 <section id="achievements">
   <div class="sec-header">
@@ -514,7 +514,7 @@ footer span{color:var(--terracotta);}
     </div>
   </div>
 </section>
-
+ 
 <!-- CONTACT -->
 <section id="contact">
   <div class="sec-header" style="margin-bottom:0;">
@@ -555,11 +555,11 @@ footer span{color:var(--terracotta);}
     </div>
   </div>
 </section>
-
+ 
 <footer>
   <p>© 2025 <span>Subhasmita Das</span> — DevOps &amp; Cloud Engineer</p>
   <p>Crafted with care · Stockholm, Sweden</p>
 </footer>
-
+ 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const rows = document.querySe
